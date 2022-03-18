@@ -1,4 +1,5 @@
 import { v4 } from "uuid";
+import { detailMemStore } from "./detail-mem-store.js";
 
 let placemarkers = [];
 
@@ -14,7 +15,9 @@ export const placemarkerMemStore = {
   },
 
   async getPlacemarkerById(id) {
-    return placemarkers.find((placemarker) => placemarker._id === id);
+    const list = placemarkers.find((placemarker) => placemarker._id === id);
+    list.details = await detailMemStore.getDetailsByPlacemarkerId(list._id);
+    return list;
   },
 
   async deletePlacemarkerById(id) {

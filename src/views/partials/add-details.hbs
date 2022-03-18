@@ -1,0 +1,23 @@
+<form class="box" action="/placemarker/{{placemarker._id}}/adddetail" method="POST">
+  <label>Enter Track Details:</label>
+  <div class="field is-horizontal">
+    <div class="field-body">
+      <div class="field">
+        <input class="input" type="text" placeholder="Enter Name of Church" name="name">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Year Built" name="year">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Latitude" name="latitude">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Longitude" name="longitude">
+      </div>
+      <div class="field">
+        <input class="input" type="text" placeholder="Religious Order" name="religion">
+      </div>
+    </div>
+  </div>
+  <button class="button is-primary">Add Track</button>
+</form>

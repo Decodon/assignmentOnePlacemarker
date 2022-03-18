@@ -1,5 +1,6 @@
 import { accountsController } from "./controllers/accounts-controller.js";
 import { dashboardController } from "./controllers/dashboard-controller.js";
+import { placemarkerController } from "./controllers/placemarker-controller.js";
 
 export const webRoutes = [
   { method: "GET", path: "/", config: accountsController.index },
@@ -10,6 +11,17 @@ export const webRoutes = [
   { method: "POST", path: "/authenticate", config: accountsController.login },
 
   { method: "GET", path: "/dashboard", config: dashboardController.index },
+
+  {
+    method: "GET",
+    path: "/placemarker/{id}",
+    config: placemarkerController.index,
+  },
+  {
+    method: "POST",
+    path: "/placemarker/{id}/adddetail",
+    config: placemarkerController.addDetail,
+  },
   {
     method: "POST",
     path: "/dashboard/addplacemarker",
