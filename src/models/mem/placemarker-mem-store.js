@@ -20,6 +20,10 @@ export const placemarkerMemStore = {
     return list;
   },
 
+  async getUserPlacemarkers(userid) {
+    return placemarkers.filter((placemarker) => placemarker.userid === userid);
+  },
+
   async deletePlacemarkerById(id) {
     const index = placemarkers.findIndex(
       (placemarker) => placemarker._id === id
