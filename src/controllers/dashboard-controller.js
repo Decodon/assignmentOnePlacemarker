@@ -27,4 +27,14 @@ export const dashboardController = {
       return h.redirect("/dashboard");
     },
   },
+
+  deletePlacemarker: {
+    handler: async function (request, h) {
+      const placemarker = await db.placemarkerStore.getPlacemarkerById(
+        request.params.id
+      );
+      await db.placemarkerStore.deletePlacemarkerById(placemarker._id);
+      return h.redirect("/dashboard");
+    },
+  },
 };

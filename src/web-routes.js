@@ -28,4 +28,15 @@ export const webRoutes = [
     path: "/dashboard/addplacemarker",
     config: dashboardController.addPlacemarker,
   },
+
+  {
+    method: "GET",
+    path: "/dashboard/deleteplacemarker/{id}",
+    config: dashboardController.deletePlacemarker,
+  },
+  {
+    method: "GET",
+    path: "/placemarker/{id}/deletedetail/{detailid}",
+    config: placemarkerController.deleteDetail,
+  },
 ];

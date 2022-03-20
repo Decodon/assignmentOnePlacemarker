@@ -28,7 +28,7 @@ export const placemarkerMemStore = {
     const index = placemarkers.findIndex(
       (placemarker) => placemarker._id === id
     );
-    placemarker.splice(index, 1);
+    placemarkers.splice(index, 1);
   },
 
   async deleteAllPlacemarkers() {
