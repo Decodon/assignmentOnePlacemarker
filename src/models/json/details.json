@@ -1,3 +1,39 @@
 {
-  "details": []
+  "details": [
+    {
+      "name": "Declan",
+      "year": 123,
+      "latitude": 123,
+      "longitude": 15,
+      "religion": "Christian",
+      "_id": "1896e49a-5e8c-4eb7-926e-77a2d82afd58",
+      "placemarkerid": "0aead6d6-88dd-4316-b9dc-339967e3095f"
+    },
+    {
+      "name": "Declan",
+      "year": 2022,
+      "latitude": -90,
+      "longitude": 179,
+      "religion": "Judaism",
+      "_id": "3b1d8b3a-44b6-48ce-abc3-f12070eeb890",
+      "placemarkerid": "0aead6d6-88dd-4316-b9dc-339967e3095f"
+    },
+    {
+      "name": "Clon ",
+      "year": 1824,
+      "latitude": -89.99,
+      "longitude": -125.26,
+      "religion": "Other",
+      "_id": "e2644064-8e7e-4f71-9c0e-4b51f61d5038",
+      "placemarkerid": "0aead6d6-88dd-4316-b9dc-339967e3095f"
+    },
+    {
+      "name": "",
+      "year": 0,
+      "latitude": 0,
+      "longitude": 0,
+      "_id": "7b445615-8954-4ba2-84f8-a2889e678ca5",
+      "placemarkerid": "7abd08bc-8aab-4838-aa37-05e11dc4c948"
+    }
+  ]
 }

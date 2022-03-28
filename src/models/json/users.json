@@ -13,6 +13,34 @@
       "email": "homer@simpsons.com",
       "password": "Password",
       "_id": "cf652067-72b1-46cf-8c63-e8327b936502"
+    },
+    {
+      "firstName": "Homer",
+      "lastName": "S",
+      "email": "homer@simpsons.com",
+      "password": "pass",
+      "_id": "657c97f8-f390-4e0a-93e4-ad278b8e3a2c"
+    },
+    {
+      "firstName": "Declan",
+      "lastName": "O' Donovan",
+      "email": "homer@simpsons.com",
+      "password": "passwprd",
+      "_id": "0087b527-9759-447a-b798-358acfff64ec"
+    },
+    {
+      "firstName": "Maggie",
+      "lastName": "Simpson",
+      "email": "maggie@simpson.com",
+      "password": "secret",
+      "_id": "9330a447-dba6-4c4d-a3f1-a661e0aae659"
+    },
+    {
+      "firstName": "Maggie",
+      "lastName": "Simpson",
+      "email": "maggie@simpson.com",
+      "password": "secret",
+      "_id": "48c10f9e-ef69-48da-a728-ab60928132c2"
     }
   ]
 }

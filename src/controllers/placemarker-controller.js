@@ -1,4 +1,5 @@
 import { db } from "../models/db.js";
+import { DetailSpec } from "../models/joi-schemas.js";
 
 export const placemarkerController = {
   index: {
@@ -15,6 +16,19 @@ export const placemarkerController = {
   },
 
   addDetail: {
+    /* validate: {
+      payload: DetailSpec,
+      options: { abortEarly: false },
+      failAction: function (request, h, error) {
+        return h
+          .view("placemarker-view", {
+            title: "Add detail error",
+            errors: error.details,
+          })
+          .takeover()
+          .code(400);
+      },
+    }, */
     handler: async function (request, h) {
       const placemarker = await db.placemarkerStore.getPlacemarkerById(
         request.params.id

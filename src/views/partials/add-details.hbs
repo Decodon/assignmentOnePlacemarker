@@ -6,16 +6,26 @@
         <input class="input" type="text" placeholder="Enter Name of Church" name="name">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Year Built" name="year">
+        <input class="input" type="number" placeholder="Year Built" name="year" min="0" max="2022">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Latitude" name="latitude">
+        <input class="input" type="number" placeholder="Latitude" name="latitude" min="-90" max="90" step="0.01">
       </div>
       <div class="field">
-        <input class="input" type="text" placeholder="Longitude" name="longitude">
+        <input class="input" type="number" placeholder="Longitude" name="longitude" min="-180" max="180" step="0.01">
       </div>
-      <div class="field">
+      <!--<div class="field">
         <input class="input" type="text" placeholder="Religious Order" name="religion">
+      </div>
+      -->
+      <div class="field">
+        <select class="form-control" id="Religion" name="religion">
+          <option value="" selected="selected" disabled="disabled">-- select one --</option>
+          <option value="Christian">Christian</option>
+          <option value="Judaism">Judaism</option>
+          <option value="Hinduism">Hinduism</option>
+          <option value="Other">Other</option>
+        </select>
       </div>
     </div>
   </div>
