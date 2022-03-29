@@ -22,10 +22,14 @@ export const placemarkerJsonStore = {
 
   async getPlacemarkerById(id) {
     await db.read();
-    const list = db.data.placemarkers.find(
+    let list = db.data.placemarkers.find(
       (placemarker) => placemarker._id === id
     );
-    list.details = await detailJsonStore.getDetailsByPlacemarkerId(list._id);
+    if (list) {
+      list.details = await detailJsonStore.getDetailsByPlacemarkerId(list._id);
+    } else {
+      list = null;
+    }
     return list;
   },
 
@@ -41,7 +45,7 @@ export const placemarkerJsonStore = {
     const index = db.data.placemarkers.findIndex(
       (placemarker) => placemarker._id === id
     );
-    db.data.placemarkers.splice(index, 1);
+    if (index !== -1) db.data.placemarkers.splice(index, 1);
     await db.write();
   },
 

@@ -16,8 +16,11 @@ export const placemarkerMemStore = {
 
   async getPlacemarkerById(id) {
     const list = placemarkers.find((placemarker) => placemarker._id === id);
-    list.details = await detailMemStore.getDetailsByPlacemarkerId(list._id);
-    return list;
+    if (list) {
+      list.details = await detailMemStore.getDetailsByPlacemarkerId(list._id);
+      return list;
+    }
+    return null;
   },
 
   async getUserPlacemarkers(userid) {
@@ -28,7 +31,7 @@ export const placemarkerMemStore = {
     const index = placemarkers.findIndex(
       (placemarker) => placemarker._id === id
     );
-    placemarkers.splice(index, 1);
+    if (index !== -1) placemarkers.splice(index, 1);
   },
 
   async deleteAllPlacemarkers() {
