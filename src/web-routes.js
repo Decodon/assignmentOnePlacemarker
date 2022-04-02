@@ -39,4 +39,11 @@ export const webRoutes = [
     path: "/placemarker/{id}/deletedetail/{detailid}",
     config: placemarkerController.deleteDetail,
   },
+
+  {
+    method: "GET",
+    path: "/{param*}",
+    handler: { directory: { path: "./public" } },
+    options: { auth: false },
+  },
 ];

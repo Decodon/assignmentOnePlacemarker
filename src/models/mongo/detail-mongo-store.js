@@ -1,4 +1,5 @@
 import { Detail } from "./detail.js";
+import { Placemarker } from "./placemarker.js";
 
 export const detailMongoStore = {
   async getDetailsByPlacemarkerId(id) {
@@ -11,16 +12,11 @@ export const detailMongoStore = {
     return details;
   },
 
-  async addDetail(playlistId, detail) {
-    detail.playlistid = playlistId;
+  async addDetail(placemarkerId, detail) {
+    detail.placemarkerid = placemarkerId;
     const newDetail = new Detail(detail);
     const detailObj = await newDetail.save();
     return this.getDetailById(detailObj._id);
-  },
-
-  async getDetailsByPlaylistId(id) {
-    const details = await Detail.find({ playlistid: id }).lean();
-    return details;
   },
 
   async getDetailById(id) {

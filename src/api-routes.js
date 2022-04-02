@@ -1,5 +1,6 @@
 import { userApi } from "./api/user-api.js";
 import { placemarkerApi } from "./api/placemarker-api.js";
+import { detailApi } from "./api/detail-api.js";
 
 export const apiRoutes = [
   { method: "POST", path: "/api/users", config: userApi.create },
@@ -24,4 +25,14 @@ export const apiRoutes = [
     path: "/api/placemarkers/{id}",
     config: placemarkerApi.deleteOne,
   },
+
+  { method: "GET", path: "/api/details", config: detailApi.find },
+  { method: "GET", path: "/api/details/{id}", config: detailApi.findOne },
+  {
+    method: "POST",
+    path: "/api/placemarkers/{id}/details",
+    config: detailApi.create,
+  },
+  { method: "DELETE", path: "/api/details", config: detailApi.deleteAll },
+  { method: "DELETE", path: "/api/details/{id}", config: detailApi.deleteOne },
 ];

@@ -1,39 +1,31 @@
 {
   "details": [
     {
-      "name": "Declan",
-      "year": 123,
-      "latitude": 123,
-      "longitude": 15,
+      "name": "Clon Church 1",
+      "year": 1687,
+      "latitude": -45.2,
+      "longitude": 112.21,
       "religion": "Christian",
-      "_id": "1896e49a-5e8c-4eb7-926e-77a2d82afd58",
-      "placemarkerid": "0aead6d6-88dd-4316-b9dc-339967e3095f"
+      "_id": "ac849fbe-8916-4fe3-bdf5-7b6af549eb18",
+      "placemarkerid": "cc049c15-282f-44db-a398-576ee66f4dbc"
     },
     {
-      "name": "Declan",
-      "year": 2022,
-      "latitude": -90,
-      "longitude": 179,
+      "name": "Clon Church 2",
+      "year": 1857,
+      "latitude": -45.21,
+      "longitude": 112.22,
       "religion": "Judaism",
-      "_id": "3b1d8b3a-44b6-48ce-abc3-f12070eeb890",
-      "placemarkerid": "0aead6d6-88dd-4316-b9dc-339967e3095f"
+      "_id": "615d1655-ba02-4595-8abc-27a3d49f6b6d",
+      "placemarkerid": "cc049c15-282f-44db-a398-576ee66f4dbc"
     },
     {
-      "name": "Clon ",
-      "year": 1824,
-      "latitude": -89.99,
-      "longitude": -125.26,
+      "name": "Clon Church 3",
+      "year": 2001,
+      "latitude": 45.23,
+      "longitude": -112.21,
       "religion": "Other",
-      "_id": "e2644064-8e7e-4f71-9c0e-4b51f61d5038",
-      "placemarkerid": "0aead6d6-88dd-4316-b9dc-339967e3095f"
-    },
-    {
-      "name": "",
-      "year": 0,
-      "latitude": 0,
-      "longitude": 0,
-      "_id": "7b445615-8954-4ba2-84f8-a2889e678ca5",
-      "placemarkerid": "7abd08bc-8aab-4838-aa37-05e11dc4c948"
+      "_id": "dd92d0ad-f88b-41d1-95b7-85bfc7b416b8",
+      "placemarkerid": "cc049c15-282f-44db-a398-576ee66f4dbc"
     }
   ]
 }

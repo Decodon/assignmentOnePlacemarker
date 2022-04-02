@@ -58,4 +58,32 @@ export const placemarkerService = {
     );
     return res.data;
   },
+
+  async getAllDetails() {
+    const res = await axios.get(`${this.placemarkerUrl}/api/details`);
+    return res.data;
+  },
+
+  async createDetail(id, detail) {
+    const res = await axios.post(
+      `${this.placemarkerUrl}/api/placemarkers/${id}/details`,
+      detail
+    );
+    return res.data;
+  },
+
+  async deleteAllDetails() {
+    const res = await axios.delete(`${this.placemarkerUrl}/api/details`);
+    return res.data;
+  },
+
+  async getDetail(id) {
+    const res = await axios.get(`${this.placemarkerUrl}/api/details/${id}`);
+    return res.data;
+  },
+
+  async deleteDetail(id) {
+    const res = await axios.delete(`${this.placemarkerUrl}/api/details/${id}`);
+    return res.data;
+  },
 };

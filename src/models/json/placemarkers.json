@@ -1,16 +1,9 @@
 {
   "placemarkers": [
     {
-      "title": "Bandon",
-      "_id": "00e0ba04-6180-46bd-b447-b786b19d3432"
-    },
-    {
-      "title": "Skibbereen",
-      "_id": "89097374-4ca2-488f-872e-97edf1156119"
-    },
-    {
-      "title": "Kenmare",
-      "_id": "589cf0b0-8268-4c7d-880a-8a3f7570d73b"
+      "title": "Clonakilty",
+      "userid": "811f1f0f-03ae-4ab6-ae5a-3bd8e921f3cb",
+      "_id": "cc049c15-282f-44db-a398-576ee66f4dbc"
     }
   ]
 }
