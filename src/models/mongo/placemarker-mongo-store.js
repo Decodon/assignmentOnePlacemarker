@@ -26,6 +26,15 @@ export const placemarkerMongoStore = {
     return this.getPlacemarkerById(placemarkerObj._id);
   },
 
+  async updatePlacemarker(updatedPlacemarker) {
+    const placemarker = await Placemarker.findOne({
+      _id: updatedPlacemarker._id,
+    });
+    placemarker.title = updatedPlacemarker.title;
+    placemarker.img = updatedPlacemarker.img;
+    await placemarker.save();
+  },
+
   async getUserPlacemarkers(id) {
     const placemarker = await Placemarker.find({ userid: id }).lean();
     return placemarker;

@@ -54,4 +54,31 @@ export const placemarkerController = {
       return h.redirect(`/placemarker/${placemarker._id}`);
     },
   },
+
+  /* uploadImage: {
+    handler: async function (request, h) {
+      try {
+        const placemarker = await db.placemarkerStore.getPlacemarkerById(
+          request.params.id
+        );
+        const file = request.payload.imagefile;
+        if (Object.keys(file).length > 0) {
+          const url = await imageStore.uploadImage(request.payload.imagefile);
+          placemarker.img = url;
+          db.placemarkerStore.updatePlacemarker(placemarker);
+        }
+        return h.redirect(`/placemarker/${placemarker._id}`);
+      } catch (err) {
+        console.log(err);
+        return h.redirect(`/placemarker/${placemarker._id}`);
+      }
+    },
+    payload: {
+      multipart: true,
+      output: "data",
+      maxBytes: 209715200,
+      parse: true,
+    },
+  },
+  */
 };

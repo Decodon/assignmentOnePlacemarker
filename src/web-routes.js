@@ -46,4 +46,11 @@ export const webRoutes = [
     handler: { directory: { path: "./public" } },
     options: { auth: false },
   },
+  /*
+  {
+    method: "POST",
+    path: "/placemarker/{id}/uploadimage",
+    config: placemarkerController.uploadImage,
+  },
+  */
 ];
