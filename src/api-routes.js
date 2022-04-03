@@ -35,4 +35,10 @@ export const apiRoutes = [
   },
   { method: "DELETE", path: "/api/details", config: detailApi.deleteAll },
   { method: "DELETE", path: "/api/details/{id}", config: detailApi.deleteOne },
+
+  {
+    method: "POST",
+    path: "/api/users/authenticate",
+    config: userApi.authenticate,
+  },
 ];

@@ -3,6 +3,7 @@ import { assertSubset } from "../test-utils.js";
 import { placemarkerService } from "./placemarker-service.js";
 import {
   maggie,
+  maggieCredentials,
   town,
   testPlacemarkers,
   testDetails,
@@ -14,10 +15,14 @@ suite("Detail API tests", () => {
   let newTown = null;
 
   setup(async () => {
-    await placemarkerService.deleteAllPlacemarkers();
-    await placemarkerService.deleteAllUsers();
-    await placemarkerService.deleteAllDetails();
+    placemarkerService.clearAuth();
     user = await placemarkerService.createUser(maggie);
+    await placemarkerService.authenticate(maggieCredentials);
+    await placemarkerService.deleteAllPlacemarkers();
+    await placemarkerService.deleteAllDetails();
+    await placemarkerService.deleteAllUsers();
+    user = await placemarkerService.createUser(maggie);
+    await placemarkerService.authenticate(maggieCredentials);
     town.userid = user._id;
     newTown = await placemarkerService.createPlacemarker(town);
   });

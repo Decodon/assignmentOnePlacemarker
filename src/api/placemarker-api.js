@@ -10,7 +10,9 @@ import { validationError } from "./logger.js";
 
 export const placemarkerApi = {
   find: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         const placemarkers = await db.placemarkerStore.getAllPlacemarkers();
@@ -26,7 +28,9 @@ export const placemarkerApi = {
   },
 
   findOne: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     async handler(request) {
       try {
         const placemarker = await db.placemarkerStore.getPlacemarkerById(
@@ -48,7 +52,9 @@ export const placemarkerApi = {
   },
 
   create: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         const placemarker = request.payload;
@@ -71,7 +77,9 @@ export const placemarkerApi = {
   },
 
   deleteOne: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         const placemarker = await db.placemarkerStore.getPlacemarkerById(
@@ -92,7 +100,9 @@ export const placemarkerApi = {
   },
 
   deleteAll: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         await db.placemarkerStore.deleteAllPlacemarkers();

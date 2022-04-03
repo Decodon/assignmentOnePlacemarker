@@ -1,6 +1,5 @@
 import axios from "axios";
-
-import { serviceUrl } from "../fixtures.js";
+import { maggie, serviceUrl } from "../fixtures.js";
 
 export const placemarkerService = {
   placemarkerUrl: serviceUrl,
@@ -85,5 +84,18 @@ export const placemarkerService = {
   async deleteDetail(id) {
     const res = await axios.delete(`${this.placemarkerUrl}/api/details/${id}`);
     return res.data;
+  },
+
+  async authenticate(user) {
+    const response = await axios.post(
+      `${this.placemarkerUrl}/api/users/authenticate`,
+      user
+    );
+    axios.defaults.headers.common.Authorization = `Bearer ${response.data.token}`;
+    return response.data;
+  },
+
+  async clearAuth() {
+    axios.defaults.headers.common.Authorization = "";
   },
 };

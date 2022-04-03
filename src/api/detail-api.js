@@ -3,7 +3,9 @@ import { db } from "../models/db.js";
 
 export const detailApi = {
   find: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         const details = await db.detailStore.getAllDetails();
@@ -15,7 +17,9 @@ export const detailApi = {
   },
 
   findOne: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     async handler(request) {
       try {
         const detail = await db.detailStore.getDetailById(request.params.id);
@@ -30,7 +34,9 @@ export const detailApi = {
   },
 
   create: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         const detail = await db.detailStore.addDetail(
@@ -48,7 +54,9 @@ export const detailApi = {
   },
 
   deleteAll: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         await db.detailStore.deleteAllDetails();
@@ -60,7 +68,9 @@ export const detailApi = {
   },
 
   deleteOne: {
-    auth: false,
+    auth: {
+      strategy: "jwt",
+    },
     handler: async function (request, h) {
       try {
         const detail = await db.detailStore.getDetailById(request.params.id);

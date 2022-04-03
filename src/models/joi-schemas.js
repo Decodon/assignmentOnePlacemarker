@@ -59,3 +59,12 @@ export const PlacemarkerSpecPlus = PlacemarkerSpec.keys({
 export const PlacemarkerArraySpec = Joi.array()
   .items(PlacemarkerSpecPlus)
   .label("PlacemarkerArray");
+
+export const JwtAuth = Joi.object()
+  .keys({
+    success: Joi.boolean().example("true").required(),
+    token: Joi.string()
+      .example("eyJhbGciOiJND.g5YmJisIjoiaGYwNTNjAOhE.gCWGmY5-YigQw0DCBo")
+      .required(),
+  })
+  .label("JwtAuth");
